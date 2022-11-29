@@ -23,11 +23,32 @@ for i in range(n):
     list_1.append(random.randint(1000, 9999))
 print(list_1)
 
-list_2 = ''.join(str(x) for x in list_1)
-print("Исходная строка: " + list_2)
 
-num: str = input("Какую цифру удалить?: ")
-for i in list_2:
-    if num in list_2:
-        res_list_2: str = list_2.replace('num', '')
-print(res_list_2)
+list_2 = list_1
+list_2 = list(map(str,list_2))
+print (list_2)
+
+num_for_delite = input("Какую цифру удалить?: ")
+for i in range(len(list_2)):
+    if num_for_delite in list_2[i]:
+        element = list_2[i]
+        element = element.replace(num_for_delite, "")
+        my_str = ""
+        for x in element:
+            my_str+=x
+        list_2 [i] = my_str
+list_2 = list(map(int, list_2))
+print(list_2)
+
+num = 0
+sum = 0
+
+for i in range (len(list_2)):
+    while list_2[i] > 0:
+        num = list_2[i]%10
+        if list_2[i]!=0:
+            sum+=num
+        num = num/10
+
+print(list_2)
+
