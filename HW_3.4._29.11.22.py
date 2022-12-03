@@ -13,7 +13,7 @@ while True:
     if num != 0:
         if num % 2 == 0:
             result.append(0)
-            a = num // 2
+            num = num // 2
         elif num % 2 == 1:
             result.append(1)
             num= num // 2

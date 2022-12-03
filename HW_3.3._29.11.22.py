@@ -13,7 +13,7 @@ for i in range(n):
 print(list_1)
 
 list_2 = []
-x = 0
+
 
 for i in range (len(list_1)):
     list_2. append(round(list_1[i] - int(list_1[i]), 2))
